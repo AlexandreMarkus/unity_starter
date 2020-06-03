@@ -28,12 +28,18 @@ void test_char_from_int_10(){
     TEST_ASSERT_EQUAL_STRING("10", longtodec(10, car));
 }
 
+void test_strcopy_helloworld(){
+    char strCopiee[100];
+    TEST_ASSERT_EQUAL_STRING("Hello World", strcpy(strCopiee, "Hello World"));
+}
+
 int main(void){
     UNITY_BEGIN();
     RUN_TEST(test_count_string_lenght_of_9);
     RUN_TEST(test_dec_to_hex_convertion_18_32_bit);
     RUN_TEST(test_dec_to_hex_convertion_155_8_bit);
     RUN_TEST(test_char_from_int_10);
+    RUN_TEST(test_strcopy_helloworld);
 
     return UNITY_END();
 }
