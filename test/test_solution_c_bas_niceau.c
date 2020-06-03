@@ -29,9 +29,8 @@ void test_char_from_int_10(){
 }
 
 void test_strcopy_helloworld(){
-    char HelloWorld[100] = "Hello World";
     char strCopiee[100];
-    TEST_ASSERT_EQUAL_STRING("Hello World", strcpy(strCopiee, HelloWorld));
+    TEST_ASSERT_EQUAL_STRING("Hello World", strcpy(strCopiee, "Hello World"));
 }
 
 int main(void){
