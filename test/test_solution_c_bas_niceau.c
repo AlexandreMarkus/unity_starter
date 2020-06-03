@@ -33,6 +33,11 @@ void test_strcopy_helloworld(){
     TEST_ASSERT_EQUAL_STRING("Hello World", strcpy(strCopiee, "Hello World"));
 }
 
+void test_strreverse_helloworld(){
+    char HelloWorld[100] = "Hello World";
+    TEST_ASSERT_EQUAL_STRING("dlroW olleH", strreverse(HelloWorld));
+}
+
 int main(void){
     UNITY_BEGIN();
     RUN_TEST(test_count_string_lenght_of_9);
@@ -40,6 +45,7 @@ int main(void){
     RUN_TEST(test_dec_to_hex_convertion_155_8_bit);
     RUN_TEST(test_char_from_int_10);
     RUN_TEST(test_strcopy_helloworld);
+    RUN_TEST(test_strreverse_helloworld);
 
     return UNITY_END();
 }
